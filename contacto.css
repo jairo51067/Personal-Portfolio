@@ -1,0 +1,164 @@
+:root {
+  --font-size-base: 16px;
+  --font-family: Arial, sans-serif;
+  --color-primary: #000;
+  --color-secondary: #ccc;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  padding: 3%;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  /* border: 1px solid var(--color-primary); */
+}
+
+header[role="banner"] {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contenedor_logo-nombre {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-nombre {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 100%;
+  margin: 0% 3% 0% 3%;
+  padding: 3% 0%;
+}
+
+.nombre {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.navegador {
+  width: 100%;
+  text-align: center;
+}
+
+header[role="banner"] nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header[role="banner"] nav ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+header[role="banner"] nav ul li {
+  list-style: none;
+  &:hover{
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+header[role="banner"] nav ul li a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+header p {
+  margin: 0% 0% 20% 0%;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  margin: 0 auto;
+  padding: 3%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 550px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+input {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  width: 100%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+::placeholder{
+  color: #ccc;
+}
+
+/* Media queries */
+@media (min-width: 1440px) {
+  body {
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: calc(var(--font-size-base) * 0.9);
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: calc(var(--font-size-base) * 0.8);
+    flex-wrap: nowrap;
+  }
+
+  .contenedor_logo-nombre {
+    flex-wrap: wrap;
+  }
+
+  form {
+    min-width: 280px;
+  }
+}

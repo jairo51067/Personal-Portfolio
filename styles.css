@@ -1,0 +1,234 @@
+:root {
+  --font-size-base: 15px;
+  --font-family: "Verdana", Arial, sans-serif;
+  --color-primary: #000;
+  --color-secondary: #ccc;
+}
+html {
+  font-size: var(--font-size-base);
+}
+body {
+  padding: 3%;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+h2 {
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+header[role="banner"] {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid var(--color-primary);
+}
+.contenedor_logo-nombre {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-nombre {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 100%;
+  margin: 0% 3% 0% 3%;
+  padding: 3% 0%;
+}
+.nombre {
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  align-self: center;
+}
+.navegador {
+  width: 100%;
+  text-align: center;
+}
+header[role="banner"] nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header[role="banner"] nav ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+header[role="banner"] nav ul li {
+  list-style: none;
+  &:hover {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+.contenedor-presentacion{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 7% 0;
+}
+header p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #7c8184;
+}
+header h2 {
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 3rem;
+  margin: 0;
+}
+/*  */
+main[role="main"] {
+  width: 100%;
+  margin: 0 auto;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid #000;
+}
+main[role="main"] section {
+  width: 32%;
+}
+main[role="main"] article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.seccion-one article, .seccion-three article, .seccion-two article {
+  border: 1px solid #000;
+}
+.link-exp {
+  padding: 0.75rem;
+  color: #5bc0de;
+  font-weight: bold;
+}
+main[role="main"] h4,
+p {
+  padding: 0.38rem;
+}
+main h2 {
+  margin: 0;
+  padding: 0.5rem;
+}
+main ul {
+  list-style-type:square;
+  list-style: square inside;
+  padding: auto;
+  text-align: start;
+}
+main li {
+  margin: 0.252rem;
+}
+/*  */
+footer[role="contentinfo"] {
+  border: 1px solid var(--color-primary);
+}
+footer[role="contentinfo"] h2 {
+  margin: 2% 0%;
+  padding: 1% 3%;
+}
+footer h4{
+  color: #d4d4d4;
+}
+footer[role="contentinfo"] p {
+  text-align: center;
+}
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+.reviews article {
+  margin: 2%;
+  padding: 2%;
+  border: 1px solid #333;
+  border-radius: 20px;
+  gap: 10px;
+}
+/* Media queries */
+@media (min-width: 1440px) {
+  body {
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 770px) {
+  html {
+    font-size: calc(var(--font-size-base) * 0.9);
+  }
+  .logo-nombre {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  main[role="main"] section {
+    width: 100%;
+  }
+  main[role="main"] article {
+    height: max-content;
+  }
+  h2 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .reviews-hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 330px) {
+  html {
+    font-size: calc(var(--font-size-base) * 0.7);
+  }
+  .contenedor_logo-nombre {
+    flex-direction: column;
+  }
+  .logo-nombre {
+    align-items: center;
+    flex-direction: column;
+  }
+  .presentacion {
+    font-size: 2.5rem;
+  }
+  .seccion-one article {
+    text-align: center;
+    background-color: #bfd0df5b;
+  }
+  .seccion-two article {
+    background-color: #bfd0df5b;
+  }
+}
